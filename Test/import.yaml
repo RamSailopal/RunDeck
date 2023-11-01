@@ -1,0 +1,31 @@
+- defaultTab: output
+  description: Test
+  executionEnabled: true
+  group: Test
+  id: import
+  loglevel: INFO
+  name: Import
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  schedule:
+    month: '*'
+    time:
+      hour: '*'
+      minute: '*/1'
+      seconds: '0'
+    weekday:
+      day: '*'
+    year: '*'
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - configuration:
+        command: python3 '/home/rundeck/import.py'
+      description: Git import
+      nodeStep: true
+      type: localexec
+    keepgoing: false
+    strategy: node-first
+  timeZone: UTC
+  uuid: import
