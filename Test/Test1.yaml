@@ -21,7 +21,7 @@
   sequence:
     commands:
     - configuration:
-        command: curl -X GET "www.google.com"
+        command: curl -X GET "www.wba.co.uk"
       description: Test1
       nodeStep: true
       type: localexec
