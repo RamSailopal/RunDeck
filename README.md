@@ -1,5 +1,7 @@
 # RunDeck SCM change import automation
 
+![example workflow](https://github.com/RamSailopal/RunDeck/actions/workflows/lint.yml/badge.svg)
+
 The current implementation of RunDeck required a manual step to "pull" changes made on a given repo into RunDeck either as additional jobs or as job modification.
 
 This repo offers a solution and allows the automated import of any changes.
