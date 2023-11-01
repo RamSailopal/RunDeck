@@ -2,7 +2,7 @@
 
 ![example workflow](https://github.com/RamSailopal/RunDeck/actions/workflows/lint.yml/badge.svg)
 
-The current implementation of RunDeck required a manual step to "pull" changes made on a given repo into RunDeck either as additional jobs or as job modification.
+The current implementation of [RunDeck](https://www.rundeck.com/) requires a manual step to "pull" changes made on a given repo into RunDeck either as additional jobs or as job modifications.
 
 This repo offers a solution and allows the automated import of any changes.
 
@@ -15,9 +15,9 @@ This repo offers a solution and allows the automated import of any changes.
         pip3 install requests
         exit
 
-4) Copy the **import.py** code into a new file located a given location on the Rundeck server that can be accessible by the **rundeck** user.
+4) Copy the **import.py** code into a new file, located at a given location on the Rundeck server that can be accessible by the **rundeck** user.
 
-5)  Given the script execute permissions:
+5)  Give the script execute permissions:
 
         chmod o+x import.py
 
@@ -38,7 +38,7 @@ A containerised local instance of RunDeck can be run with:
 
         docker run --name some-rundeck -p 4440:4440 rundeck/rundeck:4.17.1
 
-Navigate to the containers command line through:
+Navigate to the container's command line through:
 
         docker exec -it some-rundeck /bin/bash
 
