@@ -17,20 +17,18 @@ This repo offers a solution and allows the automated import of any changes.
 
 4) Copy the **import.py** code into a new file located a given location on the Rundeck server that can be accessible by the **rundeck** user.
 
-5)  Modify the TOKEN variable to reference your actual RunDeck API token.
-
-6)  Given the script execute permissions:
+5)  Given the script execute permissions:
 
         chmod o+x import.py
 
-7) Modify the following line in the **Test/import.yaml** file:
+6) Modify the following line in the **Test/import.yaml** file:
 
    
-   **command: python3 '/home/rundeck/import.py'**
+   **bash -c 'export RUNDECK_KEY="eXLnU4c3Hx5udUyWJiLX80rGKxQzmvK8" && /home/rundeck/import.py'**
 
-Change **/home/rundeck/import.py** to the location of the file on the server.
+Change **/home/rundeck/import.py** to the location of the file on the server. Also change **eXLnU4c3Hx5udUyWJiLX80rGKxQzmvK8** to your API token
 
-8) Manually setup and import the repository, following [this](https://docs.rundeck.com/docs/learning/howto/how2scm.html#exporting-jobs-continued) guide.
+7) Manually setup and import the repository, following [this](https://docs.rundeck.com/docs/learning/howto/how2scm.html#exporting-jobs-continued) guide.
 
 Through the import.py script running every minute, new repo changes will automatically get imported and "synced" with RunDeck.
 

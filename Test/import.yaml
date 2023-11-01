@@ -21,7 +21,7 @@
   sequence:
     commands:
     - configuration:
-        command: python3 '/home/rundeck/import.py'
+        command: bash -c 'export RUNDECK_KEY="eXLnU4c3Hx5udUyWJiLX80rGKxQzmvK8" && ./import.py'
       description: Git import
       nodeStep: true
       type: localexec
