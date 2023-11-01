@@ -1,0 +1,31 @@
+- defaultTab: output
+  description: Test2
+  executionEnabled: true
+  group: Test2
+  id: test2
+  loglevel: INFO
+  name: Test2
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: null
+  schedule:
+    month: '*'
+    time:
+      hour: '*'
+      minute: '*/2'
+      seconds: '0'
+    weekday:
+      day: '*'
+    year: '*'
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - configuration:
+        command: curl -X GET "www.wba.co.uk"
+      description: Test2
+      nodeStep: true
+      type: localexec
+    keepgoing: false
+    strategy: node-first
+  timeZone: UTC
+  uuid: test2
